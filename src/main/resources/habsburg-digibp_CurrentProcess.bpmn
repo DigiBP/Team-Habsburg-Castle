@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_15eheul" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_15eheul" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
   <bpmn:collaboration id="Collaboration_0mp3sig">
     <bpmn:participant id="Participant_117sccv" name="Pharmacy" processRef="Process_0l8qjyf" />
   </bpmn:collaboration>
@@ -11,12 +11,12 @@
         <bpmn:flowNodeRef>Gateway_1h6hu2r</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_15n3ex1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_12hp2tf</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0ztwljg</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0tqwohl</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1l0k3fj</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1gz848z</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1cxbbsa</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_14a38fp</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_0ztwljg</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1ogusqd" name="Assistant">
         <bpmn:flowNodeRef>Gateway_1ajw4ec</bpmn:flowNodeRef>
@@ -43,38 +43,24 @@
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_15z7bt2" sourceRef="Activity_14a38fp" targetRef="Event_0zbbwzq" />
     <bpmn:sequenceFlow id="Flow_09goswi" sourceRef="Activity_17ifqmz" targetRef="Gateway_1ajw4ec" />
-    <bpmn:sequenceFlow id="Flow_0sxzlio" name="External order type" sourceRef="Gateway_002rqdr" targetRef="Activity_17ifqmz">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Send_type=="External"}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0sxzlio" name="External order type" sourceRef="Gateway_002rqdr" targetRef="Activity_17ifqmz" />
     <bpmn:sequenceFlow id="Flow_0lcn3zs" sourceRef="StartEvent_1" targetRef="Activity_0rchv9z" />
     <bpmn:sequenceFlow id="Flow_0ay2clv" sourceRef="Activity_0rchv9z" targetRef="Activity_0ztwljg" />
     <bpmn:sequenceFlow id="Flow_0jmx151" sourceRef="Activity_0ztwljg" targetRef="Gateway_15n3ex1" />
-    <bpmn:sequenceFlow id="Flow_1a5lqeo" name="Yes" sourceRef="Gateway_15n3ex1" targetRef="Activity_1l0k3fj">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Manufacturable==true}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0d15h1d" name="No" sourceRef="Gateway_15n3ex1" targetRef="Activity_0tqwohl">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Manufacturable==false}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1a5lqeo" name="Yes" sourceRef="Gateway_15n3ex1" targetRef="Activity_1l0k3fj" />
+    <bpmn:sequenceFlow id="Flow_0d15h1d" name="No" sourceRef="Gateway_15n3ex1" targetRef="Activity_0tqwohl" />
     <bpmn:sequenceFlow id="Flow_1y9m5t7" sourceRef="Activity_0tqwohl" targetRef="Event_0zwffnq" />
     <bpmn:sequenceFlow id="Flow_19e8imx" sourceRef="Activity_1l0k3fj" targetRef="Gateway_12hp2tf" />
-    <bpmn:sequenceFlow id="Flow_0uyk8r3" name="&#60; 100" sourceRef="Gateway_12hp2tf" targetRef="Activity_1gz848z">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${AMBV_value&lt;100}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_17m63zk" name="&#62;= 100" sourceRef="Gateway_12hp2tf" targetRef="Activity_1cxbbsa">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${AMBV_value&gt;=100}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0uyk8r3" name="&#60; 100" sourceRef="Gateway_12hp2tf" targetRef="Activity_1gz848z" />
+    <bpmn:sequenceFlow id="Flow_17m63zk" name="&#62; 100" sourceRef="Gateway_12hp2tf" targetRef="Activity_1cxbbsa" />
     <bpmn:sequenceFlow id="Flow_1pmjj37" sourceRef="Activity_1cxbbsa" targetRef="Gateway_1h6hu2r" />
     <bpmn:sequenceFlow id="Flow_0ca0h9t" sourceRef="Activity_1gz848z" targetRef="Gateway_1h6hu2r" />
     <bpmn:sequenceFlow id="Flow_1j3674h" sourceRef="Gateway_1h6hu2r" targetRef="Activity_0dyrktn" />
     <bpmn:sequenceFlow id="Flow_0l2o6v9" sourceRef="Activity_0dyrktn" targetRef="Gateway_002rqdr" />
     <bpmn:sequenceFlow id="Flow_13kga3n" sourceRef="Activity_1gvaayt" targetRef="Gateway_1ajw4ec" />
     <bpmn:sequenceFlow id="Flow_0emk6dd" sourceRef="Activity_0xzp543" targetRef="Gateway_1ajw4ec" />
-    <bpmn:sequenceFlow id="Flow_0sg50h2" name="Pick up" sourceRef="Gateway_002rqdr" targetRef="Activity_1gvaayt">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Send_type=="Pick up"}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0r882g7" name="Internal storage" sourceRef="Gateway_002rqdr" targetRef="Activity_0xzp543">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Send_type=="Storage"}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0sg50h2" name="Pick up" sourceRef="Gateway_002rqdr" targetRef="Activity_1gvaayt" />
+    <bpmn:sequenceFlow id="Flow_0r882g7" name="Internal storage" sourceRef="Gateway_002rqdr" targetRef="Activity_0xzp543" />
     <bpmn:sequenceFlow id="Flow_04yiuf7" sourceRef="Gateway_1ajw4ec" targetRef="Activity_14a38fp" />
     <bpmn:endEvent id="Event_0zbbwzq" name="Order fullfilled">
       <bpmn:incoming>Flow_15z7bt2</bpmn:incoming>
@@ -84,7 +70,7 @@
       <bpmn:incoming>Flow_0ca0h9t</bpmn:incoming>
       <bpmn:outgoing>Flow_1j3674h</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:exclusiveGateway id="Gateway_15n3ex1" name="Manufacturable ?">
+    <bpmn:exclusiveGateway id="Gateway_15n3ex1" name="Will the order be manufactured?">
       <bpmn:incoming>Flow_0jmx151</bpmn:incoming>
       <bpmn:outgoing>Flow_1a5lqeo</bpmn:outgoing>
       <bpmn:outgoing>Flow_0d15h1d</bpmn:outgoing>
@@ -100,16 +86,15 @@
       <bpmn:outgoing>Flow_0sg50h2</bpmn:outgoing>
       <bpmn:outgoing>Flow_0r882g7</bpmn:outgoing>
     </bpmn:exclusiveGateway>
+    <bpmn:manualTask id="Activity_0ztwljg" name="Assess order">
+      <bpmn:incoming>Flow_0ay2clv</bpmn:incoming>
+      <bpmn:outgoing>Flow_0jmx151</bpmn:outgoing>
+    </bpmn:manualTask>
     <bpmn:userTask id="Activity_0tqwohl" name="Compose message to client">
       <bpmn:incoming>Flow_0d15h1d</bpmn:incoming>
       <bpmn:outgoing>Flow_1y9m5t7</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:userTask id="Activity_1l0k3fj" name="Calculate AMBV risk value">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="AMBV_value" type="long" />
-        </camunda:formData>
-      </bpmn:extensionElements>
       <bpmn:incoming>Flow_1a5lqeo</bpmn:incoming>
       <bpmn:outgoing>Flow_19e8imx</bpmn:outgoing>
     </bpmn:userTask>
@@ -122,11 +107,6 @@
       <bpmn:outgoing>Flow_1pmjj37</bpmn:outgoing>
     </bpmn:manualTask>
     <bpmn:userTask id="Activity_0dyrktn" name="Complete billing">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="Send_type" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
       <bpmn:incoming>Flow_1j3674h</bpmn:incoming>
       <bpmn:outgoing>Flow_0l2o6v9</bpmn:outgoing>
     </bpmn:userTask>
@@ -146,25 +126,10 @@
       <bpmn:incoming>Flow_04yiuf7</bpmn:incoming>
       <bpmn:outgoing>Flow_15z7bt2</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Activity_0rchv9z" name="Add rubrik &#34;A&#34;">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="ProductType" label="Product" type="string" />
-          <camunda:formField id="ProductAmount" label="Amount" type="long" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:manualTask id="Activity_0rchv9z" name="Add rubrik &#34;A&#34;">
       <bpmn:incoming>Flow_0lcn3zs</bpmn:incoming>
       <bpmn:outgoing>Flow_0ay2clv</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Activity_0ztwljg" name="Assess order">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="Manufacturable" label="Manufacturable ?" type="boolean" />
-        </camunda:formData>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0ay2clv</bpmn:incoming>
-      <bpmn:outgoing>Flow_0jmx151</bpmn:outgoing>
-    </bpmn:userTask>
+    </bpmn:manualTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0mp3sig">
@@ -232,7 +197,7 @@
         <di:waypoint x="1030" y="320" />
         <di:waypoint x="1120" y="320" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1028" y="290" width="35" height="14" />
+          <dc:Bounds x="1031" y="290" width="28" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0uyk8r3_di" bpmnElement="Flow_0uyk8r3">
@@ -325,7 +290,7 @@
       <bpmndi:BPMNShape id="Gateway_1wu1a9r_di" bpmnElement="Gateway_15n3ex1" isMarkerVisible="true">
         <dc:Bounds x="725" y="295" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="668" y="266" width="85" height="14" />
+          <dc:Bounds x="670" y="266" width="80" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1a0q6uz_di" bpmnElement="Gateway_12hp2tf" isMarkerVisible="true">
@@ -339,6 +304,9 @@
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1580" y="723" width="59" height="14" />
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1adt5uf_di" bpmnElement="Activity_0ztwljg">
+        <dc:Bounds x="550" y="280" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_13rtj6s_di" bpmnElement="Activity_0tqwohl">
         <dc:Bounds x="840" y="340" width="100" height="80" />
@@ -367,11 +335,8 @@
       <bpmndi:BPMNShape id="Activity_0j47hvq_di" bpmnElement="Activity_14a38fp">
         <dc:Bounds x="2330" y="200" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1p7xjzz_di" bpmnElement="Activity_0rchv9z">
+      <bpmndi:BPMNShape id="Activity_0fxd09d_di" bpmnElement="Activity_0rchv9z">
         <dc:Bounds x="400" y="650" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_00rdc8i_di" bpmnElement="Activity_0ztwljg">
-        <dc:Bounds x="550" y="280" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
