@@ -1,36 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@christophergalli 
-DigiBP
-/
-Team-Habsburg-Castle
-1
-0
-0
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Team-Habsburg-Castle/src/main/resources/habsburg-digibp_v0.5.bpmn
-@christophergalli
-christophergalli new version
-Latest commit d54b312 2 days ago
- History
- 2 contributors
-@urskaenel@christophergalli
-463 lines (463 sloc)  24.4 KB
-  
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_15eheul" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.3.0">
   <bpmn:collaboration id="Collaboration_0mp3sig">
@@ -234,10 +201,10 @@ Latest commit d54b312 2 days ago
     <bpmn:sequenceFlow id="Flow_1q203s5" sourceRef="Gateway_1qkdom8" targetRef="Activity_0ztwljg">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${customerType!="customerPrescription"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:serviceTask id="Activity_0cq0f2q" name="Call API" camunda:delegateExpression="5">
+    <bpmn:userTask id="Activity_0cq0f2q" name="Call API">
       <bpmn:incoming>Flow_0drodtl</bpmn:incoming>
       <bpmn:outgoing>Flow_1jmymte</bpmn:outgoing>
-    </bpmn:serviceTask>
+    </bpmn:userTask>
     <bpmn:textAnnotation id="TextAnnotation_0l4g4xx">
       <bpmn:text>Checkbox within form --&gt;</bpmn:text>
     </bpmn:textAnnotation>
@@ -480,7 +447,7 @@ Latest commit d54b312 2 days ago
       <bpmndi:BPMNShape id="TextAnnotation_1uaaeeb_di" bpmnElement="TextAnnotation_1uaaeeb">
         <dc:Bounds x="240" y="673" width="100" height="54" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1vnod3x_di" bpmnElement="Activity_0cq0f2q">
+      <bpmndi:BPMNShape id="Activity_1l4yl8o_di" bpmnElement="Activity_0cq0f2q">
         <dc:Bounds x="550" y="520" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_09zslvn_di" bpmnElement="Association_09zslvn">
@@ -494,15 +461,3 @@ Latest commit d54b312 2 days ago
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
