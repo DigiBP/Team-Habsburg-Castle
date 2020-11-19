@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_06hldn7" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <decision id="DecisinoTable" name="Manufacturability">
+    <decisionTable id="DecisionTable_0eniqcr">
+      <input id="InputClause_0bcp1qo" label="Substances Legal?" biodi:width="191" camunda:inputVariable="substancesLegal">
+        <inputExpression id="LiteralExpression_1avu38u" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1j4ka0p" label="Substances in Stock?" camunda:inputVariable="substancesInStock">
+        <inputExpression id="LiteralExpression_11blr17" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0z2cn49" label="Substances Available?" camunda:inputVariable="cubstancesAvailable">
+        <inputExpression id="LiteralExpression_00u5k9n" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_05w84vr" label="Manufacturable?" name="Manufacturable" typeRef="boolean" />
+      <rule id="DecisionRule_06hrejm">
+        <inputEntry id="UnaryTests_0wh8eh0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1efabjo">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fp0sop">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02ukbqw">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10qs99n">
+        <inputEntry id="UnaryTests_1k51gwy">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x75lio">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q9oody">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ngeoxf">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="DMNShape_130uf71" dmnElementRef="DecisinoTable">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
