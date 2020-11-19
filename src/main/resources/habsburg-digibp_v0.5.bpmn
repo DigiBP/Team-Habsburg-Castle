@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_15eheul" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.3.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_15eheul" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
   <bpmn:collaboration id="Collaboration_0mp3sig">
     <bpmn:participant id="Participant_117sccv" name="Pharmacy" processRef="team_habsburg" />
   </bpmn:collaboration>
@@ -12,11 +12,11 @@
         <bpmn:flowNodeRef>Gateway_15n3ex1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_12hp2tf</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0tqwohl</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_1l0k3fj</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1gz848z</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1cxbbsa</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_14a38fp</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0ztwljg</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1m20pl9</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1ogusqd" name="Assistant">
         <bpmn:flowNodeRef>Gateway_1ajw4ec</bpmn:flowNodeRef>
@@ -46,14 +46,14 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Send_type=="External"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0jmx151" sourceRef="Activity_0ztwljg" targetRef="Gateway_15n3ex1" />
-    <bpmn:sequenceFlow id="Flow_1a5lqeo" name="Yes" sourceRef="Gateway_15n3ex1" targetRef="Activity_1l0k3fj">
+    <bpmn:sequenceFlow id="Flow_1a5lqeo" name="Yes" sourceRef="Gateway_15n3ex1" targetRef="Activity_1m20pl9">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Manufacturable==true}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0d15h1d" name="No" sourceRef="Gateway_15n3ex1" targetRef="Activity_0tqwohl">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${Manufacturable==false}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1y9m5t7" sourceRef="Activity_0tqwohl" targetRef="Event_0zwffnq" />
-    <bpmn:sequenceFlow id="Flow_19e8imx" sourceRef="Activity_1l0k3fj" targetRef="Gateway_12hp2tf" />
+    <bpmn:sequenceFlow id="Flow_19e8imx" sourceRef="Activity_1m20pl9" targetRef="Gateway_12hp2tf" />
     <bpmn:sequenceFlow id="Flow_0uyk8r3" name="&#60; 100" sourceRef="Gateway_12hp2tf" targetRef="Activity_1gz848z">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${AMBV_value&lt;100}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
@@ -100,15 +100,6 @@
     <bpmn:userTask id="Activity_0tqwohl" name="Compose message to client">
       <bpmn:incoming>Flow_0d15h1d</bpmn:incoming>
       <bpmn:outgoing>Flow_1y9m5t7</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Activity_1l0k3fj" name="Calculate AMBV risk value">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="AMBV_value" type="long" />
-        </camunda:formData>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_1a5lqeo</bpmn:incoming>
-      <bpmn:outgoing>Flow_19e8imx</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:manualTask id="Activity_1gz848z" name="Produce in pharmacy laboratory">
       <bpmn:incoming>Flow_0uyk8r3</bpmn:incoming>
@@ -219,6 +210,52 @@ prescription_array=object.prescription</camunda:script>
       <bpmn:incoming>Flow_0drodtl</bpmn:incoming>
       <bpmn:outgoing>Flow_1jmymte</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:userTask id="Activity_1m20pl9" name="Calculate AMBV risk value">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="galenicalForm" label="Galenical form" type="enum">
+            <camunda:value id="parenteralia" name="Parenteralia" />
+            <camunda:value id="ophtaUnharmed" name="Ophthalmologic on the unharmed eye" />
+            <camunda:value id="inhalative" name="Inhalatives" />
+            <camunda:value id="enteralOrTopicalSterile" name="Enteral or topical (sterile)" />
+            <camunda:value id="ophthaHarmed" name="Ophthalmologic on the harmed eye" />
+            <camunda:value id="topic" name="Application on Skin" />
+            <camunda:value id="enteral" name="Enteral" />
+          </camunda:formField>
+          <camunda:formField id="riskOfSubstance" label="Risk of Substance" type="enum">
+            <camunda:properties>
+              <camunda:property id="highRisk" value="5" />
+            </camunda:properties>
+            <camunda:value id="highRisk" name="High" />
+            <camunda:value id="mediumRisk" name="Medium" />
+            <camunda:value id="lowRisk" name="Low" />
+          </camunda:formField>
+          <camunda:formField id="ratioContract" label="Ratio of contract manufacturing" type="enum">
+            <camunda:value id="onlyContract" name="Exclusively contract order" />
+            <camunda:value id="mainlyContract" name="Mainly contract order (2:1)" />
+            <camunda:value id="evenContract" name="Balanced contract order (1:1)" />
+            <camunda:value id="mainlyOwn" name="Mainly for own clientele (1:2)" />
+            <camunda:value id="onlyOwn" name="Exclusively for own clientele" />
+          </camunda:formField>
+          <camunda:formField id="manufactoringProcess" label="Manufactoring Process" type="enum">
+            <camunda:value id="aseptic" name="Aseptic" />
+            <camunda:value id="asepticSterilization" name="Aseptic with sterilization" />
+            <camunda:value id="solveMix" name="Solve and mix" />
+            <camunda:value id="dilute" name="Dilute" />
+            <camunda:value id="bottling" name="Bottling of of non-sterile compounds " />
+          </camunda:formField>
+          <camunda:formField id="amountPerYear" label="Amount of produced doses per year" type="enum">
+            <camunda:value id="over120k" name="More than 120 000" />
+            <camunda:value id="between60and120k" name="60 000 - 120 000" />
+            <camunda:value id="between30andt59k" name="30 000 - 59 999" />
+            <camunda:value id="between6and29" name="6 000 - 29 999" />
+            <camunda:value id="under6k" name="&#60; 6 000" />
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1a5lqeo</bpmn:incoming>
+      <bpmn:outgoing>Flow_19e8imx</bpmn:outgoing>
+    </bpmn:userTask>
     <bpmn:textAnnotation id="TextAnnotation_0l4g4xx">
       <bpmn:text>Checkbox within form --&gt;</bpmn:text>
     </bpmn:textAnnotation>
@@ -413,9 +450,6 @@ prescription_array=object.prescription</camunda:script>
       <bpmndi:BPMNShape id="Activity_13rtj6s_di" bpmnElement="Activity_0tqwohl">
         <dc:Bounds x="840" y="340" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_16kd8hg_di" bpmnElement="Activity_1l0k3fj">
-        <dc:Bounds x="840" y="200" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0q81any_di" bpmnElement="Activity_1gz848z">
         <dc:Bounds x="1120" y="110" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -452,6 +486,9 @@ prescription_array=object.prescription</camunda:script>
       <bpmndi:BPMNShape id="Gateway_1qkdom8_di" bpmnElement="Gateway_1qkdom8" isMarkerVisible="true">
         <dc:Bounds x="435" y="535" width="50" height="50" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jjsnu4_di" bpmnElement="Activity_0cq0f2q">
+        <dc:Bounds x="550" y="520" width="100" height="80" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_0l4g4xx_di" bpmnElement="TextAnnotation_0l4g4xx">
         <dc:Bounds x="240" y="470" width="100" height="40" />
       </bpmndi:BPMNShape>
@@ -461,8 +498,8 @@ prescription_array=object.prescription</camunda:script>
       <bpmndi:BPMNShape id="TextAnnotation_1uaaeeb_di" bpmnElement="TextAnnotation_1uaaeeb">
         <dc:Bounds x="240" y="673" width="100" height="54" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0jjsnu4_di" bpmnElement="Activity_0cq0f2q">
-        <dc:Bounds x="550" y="520" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_1m20pl9_di" bpmnElement="Activity_1m20pl9">
+        <dc:Bounds x="840" y="200" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_09zslvn_di" bpmnElement="Association_09zslvn">
         <di:waypoint x="313" y="520" />
