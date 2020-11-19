@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_06hldn7" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
-  <decision id="DecisinoTable" name="Manufacturability">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Tableofdecision" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <decision id="DecisionTable" name="Manufacturability">
     <decisionTable id="DecisionTable_0eniqcr">
-      <input id="InputClause_0bcp1qo" label="Substances Legal?" biodi:width="191" camunda:inputVariable="substancesLegal">
+      <input id="InputClause_0bcp1qo" label="Substances Legal?" biodi:width="191">
         <inputExpression id="LiteralExpression_1avu38u" typeRef="boolean">
-          <text></text>
+          <text>substancesLegal</text>
         </inputExpression>
       </input>
-      <input id="InputClause_1j4ka0p" label="Substances in Stock?" camunda:inputVariable="substancesInStock">
+      <input id="InputClause_1j4ka0p" label="Substances in Stock?">
         <inputExpression id="LiteralExpression_11blr17" typeRef="boolean">
-          <text></text>
+          <text>substancesInStock</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0z2cn49" label="Substances Available?" camunda:inputVariable="cubstancesAvailable">
+      <input id="InputClause_0z2cn49" label="Substances Available?">
         <inputExpression id="LiteralExpression_00u5k9n" typeRef="boolean">
-          <text></text>
+          <text>substancesAvailable</text>
         </inputExpression>
       </input>
       <output id="OutputClause_05w84vr" label="Manufacturable?" name="Manufacturable" typeRef="boolean" />
@@ -50,7 +50,7 @@
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape id="DMNShape_130uf71" dmnElementRef="DecisinoTable">
+      <dmndi:DMNShape id="DMNShape_130uf71" dmnElementRef="DecisionTable">
         <dc:Bounds height="80" width="180" x="160" y="100" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
