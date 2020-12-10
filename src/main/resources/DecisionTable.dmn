@@ -2,7 +2,7 @@
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Tableofdecision" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
   <decision id="DecisionTable" name="Manufacturability">
     <decisionTable id="DecisionTable_0eniqcr">
-      <input id="InputClause_0bcp1qo" label="Substances Legal?" biodi:width="191">
+      <input id="InputClause_0bcp1qo" label="Substances approved swissmedic?" biodi:width="191">
         <inputExpression id="LiteralExpression_1avu38u" typeRef="boolean">
           <text>substancesLegal</text>
         </inputExpression>
@@ -26,7 +26,7 @@
           <text>true</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1fp0sop">
-          <text>true</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_02ukbqw">
           <text>true</text>
