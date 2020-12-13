@@ -40,9 +40,23 @@
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1q9oody">
-          <text>false</text>
+          <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ngeoxf">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xvts59">
+        <inputEntry id="UnaryTests_0a9gjww">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0voce1j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16iepap">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17c6x6r">
           <text>false</text>
         </outputEntry>
       </rule>
