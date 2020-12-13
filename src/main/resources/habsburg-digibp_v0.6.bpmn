@@ -440,6 +440,11 @@ prescription_array=object.prescription</camunda:script>
           <camunda:formField id="customerName" label="Customer" type="string" defaultValue="${customerName}" />
           <camunda:formField id="customerPhone" label="Phone (optional)" type="string" defaultValue="${customerPhone}" />
           <camunda:formField id="customerEmail" label="Email" type="string" defaultValue="${customerEmail}" />
+          <camunda:formField id="deliveryMethod" label="Delivery Method" type="string" defaultValue="${deliveryMethod}" />
+          <camunda:formField id="paymentMethod" label="Payment Method" type="string" defaultValue="${paymentMethod}" />
+          <camunda:formField id="customerType" label="Customer Type" type="string" defaultValue="${customerType}" />
+          <camunda:formField id="price" label="Price per package" type="long" defaultValue="${price}" />
+          <camunda:formField id="totalPrice" label="Total Price" type="long" defaultValue="${price*productAmount}" />
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0sxzlio</bpmn:incoming>
