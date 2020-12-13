@@ -14,17 +14,15 @@
         <bpmn:flowNodeRef>Activity_1c3t2y7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1n5j5u0</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1ajw4ec</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_002rqdr</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1gvaayt</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0xzp543</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_002rqdr</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_17ifqmz</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0hvkeb8</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0r2oit9" name="Pharmacist">
         <bpmn:flowNodeRef>Activity_1ma7sux</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_15n3ex1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0tqwohl</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_14l32iy</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_0zwffnq</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0mow97z</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0rz68uo</bpmn:flowNodeRef>
@@ -38,6 +36,7 @@
         <bpmn:flowNodeRef>Activity_1919wh9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0jq5mu8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0cctmb9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_14l32iy</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:sequenceFlow id="Flow_142ckt0" sourceRef="Activity_1919wh9" targetRef="Activity_0jq5mu8" />
@@ -172,17 +171,6 @@ AMBVriskValue=object.AmbvRiskValue</camunda:script>
       <bpmn:incoming>Flow_1y9m5t7</bpmn:incoming>
       <bpmn:messageEventDefinition id="MessageEventDefinition_1l7gn9n" />
     </bpmn:endEvent>
-    <bpmn:businessRuleTask id="Activity_14l32iy" name="Decide on manufactorability" camunda:resultVariable="Manuf" camunda:decisionRef="DecisionTable" camunda:mapDecisionResult="singleResult">
-      <bpmn:extensionElements>
-        <camunda:inputOutput>
-          <camunda:outputParameter name="Manufacturable">
-            <camunda:script scriptFormat="JavaScript">Boolean(Manuf.Manufacturable)</camunda:script>
-          </camunda:outputParameter>
-        </camunda:inputOutput>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_1ft0wiw</bpmn:incoming>
-      <bpmn:outgoing>Flow_1cvufqw</bpmn:outgoing>
-    </bpmn:businessRuleTask>
     <bpmn:serviceTask id="Activity_1n5j5u0" name="Check pharmacyBot">
       <bpmn:extensionElements>
         <camunda:connector>
@@ -347,26 +335,12 @@ prescription_array=object.prescription</camunda:script>
     </bpmn:userTask>
     <bpmn:exclusiveGateway id="Gateway_1ajw4ec">
       <bpmn:incoming>Flow_0emk6dd</bpmn:incoming>
-      <bpmn:incoming>Flow_09goswi</bpmn:incoming>
       <bpmn:incoming>Flow_13kga3n</bpmn:incoming>
+      <bpmn:incoming>Flow_0clk6s6</bpmn:incoming>
       <bpmn:outgoing>Flow_04yiuf7</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:userTask id="Activity_1gvaayt" name="Inform customer">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="informingCustomer" label="Customer informed?" type="string" />
-        </camunda:formData>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0sg50h2</bpmn:incoming>
-      <bpmn:outgoing>Flow_13kga3n</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:manualTask id="Activity_0xzp543" name="Store product">
-      <bpmn:incoming>Flow_0r882g7</bpmn:incoming>
-      <bpmn:outgoing>Flow_0emk6dd</bpmn:outgoing>
-    </bpmn:manualTask>
     <bpmn:sequenceFlow id="Flow_15z7bt2" sourceRef="Activity_14a38fp" targetRef="Event_0zbbwzq" />
     <bpmn:sequenceFlow id="Flow_04yiuf7" sourceRef="Gateway_1ajw4ec" targetRef="Activity_14a38fp" />
-    <bpmn:sequenceFlow id="Flow_09goswi" sourceRef="Activity_17ifqmz" targetRef="Gateway_1ajw4ec" />
     <bpmn:sequenceFlow id="Flow_13kga3n" sourceRef="Activity_1gvaayt" targetRef="Gateway_1ajw4ec" />
     <bpmn:sequenceFlow id="Flow_0emk6dd" sourceRef="Activity_0xzp543" targetRef="Gateway_1ajw4ec" />
     <bpmn:sequenceFlow id="Flow_0sxzlio" name="External order type" sourceRef="Gateway_002rqdr" targetRef="Activity_0hvkeb8">
@@ -419,7 +393,7 @@ prescription_array=object.prescription</camunda:script>
     <bpmn:userTask id="Activity_0jq5mu8" name="Calculate Price and Working hours">
       <bpmn:extensionElements>
         <camunda:formData>
-          <camunda:formField id="price" label="Price per package" type="string" />
+          <camunda:formField id="price" label="Price per package" type="long" />
           <camunda:formField id="workingHours" label="How many hours did the production take?" type="string" />
         </camunda:formData>
       </bpmn:extensionElements>
@@ -442,32 +416,46 @@ prescription_array=object.prescription</camunda:script>
       <bpmn:outgoing>Flow_0sg50h2</bpmn:outgoing>
       <bpmn:outgoing>Flow_0r882g7</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:manualTask id="Activity_17ifqmz" name="Send product">
-      <bpmn:incoming>Flow_0clk6s6</bpmn:incoming>
-      <bpmn:outgoing>Flow_09goswi</bpmn:outgoing>
+    <bpmn:sequenceFlow id="Flow_0clk6s6" sourceRef="Activity_0hvkeb8" targetRef="Gateway_1ajw4ec" />
+    <bpmn:userTask id="Activity_1gvaayt" name="Inform customer">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="informingCustomer" label="Customer informed?" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0sg50h2</bpmn:incoming>
+      <bpmn:outgoing>Flow_13kga3n</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:manualTask id="Activity_0xzp543" name="Store product">
+      <bpmn:incoming>Flow_0r882g7</bpmn:incoming>
+      <bpmn:outgoing>Flow_0emk6dd</bpmn:outgoing>
     </bpmn:manualTask>
     <bpmn:userTask id="Activity_0hvkeb8" name="Complete billing">
       <bpmn:extensionElements>
         <camunda:formData>
-          <camunda:formField id="productName" label="Product" type="string" />
-          <camunda:formField id="productAmount" label="Amount" type="long" />
-          <camunda:formField id="amountType" label="Amount Type" type="string" />
-          <camunda:formField id="deliveryDate" label="Delivery Date" type="date" />
-          <camunda:formField id="customerName" label="Customer" type="string" />
-          <camunda:formField id="customerPhone" label="Phone (optional)" type="string" />
-          <camunda:formField id="customerEmail" label="Email" type="string" />
-          <camunda:formField id="deliveryMethod" label="Delivery Method" type="string" defaultValue="${deliveryMethod}" />
-          <camunda:formField id="paymentMethod" label="Payment Method" type="string" defaultValue="${paymentMethod}" />
-          <camunda:formField id="customerType" label="Customer Type" type="string" defaultValue="${customerType}" />
-          <camunda:formField id="producer" label="Produced by" type="string" defaultValue="${producer}" />
-          <camunda:formField id="releaser" label="Released by" type="string" defaultValue="${releaser}" />
-          <camunda:formField id="price" label="Price per package" type="long" defaultValue="${price}" />
+          <camunda:formField id="productName" label="Product" type="string" defaultValue="${productName}" />
+          <camunda:formField id="productAmount" label="Amount" type="long" defaultValue="${productAmount}" />
+          <camunda:formField id="amountType" label="Amount Type" type="string" defaultValue="${amountType}" />
+          <camunda:formField id="deliveryDate" label="Delivery Date" type="string" defaultValue="${deliveryDate}" />
+          <camunda:formField id="customerName" label="Customer" type="string" defaultValue="${customerName}" />
+          <camunda:formField id="customerPhone" label="Phone (optional)" type="string" defaultValue="${customerPhone}" />
+          <camunda:formField id="customerEmail" label="Email" type="string" defaultValue="${customerEmail}" />
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0sxzlio</bpmn:incoming>
       <bpmn:outgoing>Flow_0clk6s6</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:sequenceFlow id="Flow_0clk6s6" sourceRef="Activity_0hvkeb8" targetRef="Activity_17ifqmz" />
+    <bpmn:businessRuleTask id="Activity_14l32iy" name="Decide on manufactorability" camunda:resultVariable="Manuf" camunda:decisionRef="DecisionTable" camunda:mapDecisionResult="singleResult">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="Manufacturable">
+            <camunda:script scriptFormat="JavaScript">Boolean(Manuf.Manufacturable)</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ft0wiw</bpmn:incoming>
+      <bpmn:outgoing>Flow_1cvufqw</bpmn:outgoing>
+    </bpmn:businessRuleTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0mp3sig">
@@ -480,6 +468,11 @@ prescription_array=object.prescription</camunda:script>
       <bpmndi:BPMNShape id="Lane_1ogusqd_di" bpmnElement="Lane_1ogusqd" isHorizontal="true">
         <dc:Bounds x="182" y="455" width="3208" height="425" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0clk6s6_di" bpmnElement="Flow_0clk6s6">
+        <di:waypoint x="3030" y="570" />
+        <di:waypoint x="3150" y="570" />
+        <di:waypoint x="3150" y="675" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1f7xsft_di" bpmnElement="Flow_1f7xsft">
         <di:waypoint x="2420" y="150" />
         <di:waypoint x="2450" y="150" />
@@ -492,38 +485,34 @@ prescription_array=object.prescription</camunda:script>
       <bpmndi:BPMNEdge id="Flow_0r882g7_di" bpmnElement="Flow_0r882g7">
         <di:waypoint x="2810" y="725" />
         <di:waypoint x="2810" y="820" />
-        <di:waypoint x="2950" y="820" />
+        <di:waypoint x="2930" y="820" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2851" y="823" width="77" height="14" />
+          <dc:Bounds x="2840" y="823" width="77" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0sg50h2_di" bpmnElement="Flow_0sg50h2">
         <di:waypoint x="2835" y="700" />
-        <di:waypoint x="2950" y="700" />
+        <di:waypoint x="2930" y="700" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2881" y="703" width="37" height="14" />
+          <dc:Bounds x="2870" y="703" width="37" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0sxzlio_di" bpmnElement="Flow_0sxzlio">
         <di:waypoint x="2810" y="675" />
         <di:waypoint x="2810" y="570" />
-        <di:waypoint x="2880" y="570" />
+        <di:waypoint x="2930" y="570" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="2815" y="616" width="70" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0emk6dd_di" bpmnElement="Flow_0emk6dd">
-        <di:waypoint x="3050" y="820" />
+        <di:waypoint x="3030" y="820" />
         <di:waypoint x="3150" y="820" />
         <di:waypoint x="3150" y="725" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_13kga3n_di" bpmnElement="Flow_13kga3n">
-        <di:waypoint x="3050" y="700" />
+        <di:waypoint x="3030" y="700" />
         <di:waypoint x="3125" y="700" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_09goswi_di" bpmnElement="Flow_09goswi">
-        <di:waypoint x="3150" y="610" />
-        <di:waypoint x="3150" y="675" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_04yiuf7_di" bpmnElement="Flow_04yiuf7">
         <di:waypoint x="3175" y="700" />
@@ -624,12 +613,12 @@ prescription_array=object.prescription</camunda:script>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1cvufqw_di" bpmnElement="Flow_1cvufqw">
-        <di:waypoint x="1160" y="320" />
+        <di:waypoint x="1170" y="320" />
         <di:waypoint x="1245" y="320" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1ft0wiw_di" bpmnElement="Flow_1ft0wiw">
         <di:waypoint x="1000" y="320" />
-        <di:waypoint x="1060" y="320" />
+        <di:waypoint x="1070" y="320" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1j3674h_di" bpmnElement="Flow_1j3674h">
         <di:waypoint x="2605" y="240" />
@@ -654,10 +643,6 @@ prescription_array=object.prescription</camunda:script>
         <di:waypoint x="2290" y="150" />
         <di:waypoint x="2320" y="150" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0clk6s6_di" bpmnElement="Flow_0clk6s6">
-        <di:waypoint x="2980" y="570" />
-        <di:waypoint x="3100" y="570" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Activity_0uc8qqv_di" bpmnElement="Activity_0uc8qqv">
         <dc:Bounds x="1760" y="200" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -678,9 +663,6 @@ prescription_array=object.prescription</camunda:script>
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1531" y="405" width="78" height="14" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_14l32iy_di" bpmnElement="Activity_14l32iy">
-        <dc:Bounds x="1060" y="280" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1n5j5u0_di" bpmnElement="Activity_1n5j5u0">
         <dc:Bounds x="580" y="650" width="100" height="80" />
@@ -730,12 +712,6 @@ prescription_array=object.prescription</camunda:script>
       <bpmndi:BPMNShape id="Gateway_1ajw4ec_di" bpmnElement="Gateway_1ajw4ec" isMarkerVisible="true">
         <dc:Bounds x="3125" y="675" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_08ekdze_di" bpmnElement="Activity_1gvaayt">
-        <dc:Bounds x="2950" y="660" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0di4tye_di" bpmnElement="Activity_0xzp543">
-        <dc:Bounds x="2950" y="780" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1yzya23_di" bpmnElement="Gateway_1h6hu2r" isMarkerVisible="true">
         <dc:Bounds x="2555" y="215" width="50" height="50" />
       </bpmndi:BPMNShape>
@@ -760,11 +736,17 @@ prescription_array=object.prescription</camunda:script>
           <dc:Bounds x="2750" y="723" width="59" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0bqsd95_di" bpmnElement="Activity_17ifqmz">
-        <dc:Bounds x="3100" y="530" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_08ekdze_di" bpmnElement="Activity_1gvaayt">
+        <dc:Bounds x="2930" y="660" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0di4tye_di" bpmnElement="Activity_0xzp543">
+        <dc:Bounds x="2930" y="780" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0hvkeb8_di" bpmnElement="Activity_0hvkeb8">
-        <dc:Bounds x="2880" y="530" width="100" height="80" />
+        <dc:Bounds x="2930" y="530" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_14l32iy_di" bpmnElement="Activity_14l32iy">
+        <dc:Bounds x="1070" y="280" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
