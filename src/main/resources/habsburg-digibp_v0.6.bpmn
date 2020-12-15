@@ -249,6 +249,11 @@ prescription_array=object.prescription</camunda:script>
       <bpmn:outgoing>Flow_02q4jy2</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:userTask id="Activity_0tqwohl" name="Compose message to client">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Test" label="Test" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_0d15h1d</bpmn:incoming>
       <bpmn:outgoing>Flow_1y9m5t7</bpmn:outgoing>
     </bpmn:userTask>
@@ -684,7 +689,7 @@ AMBVriskValue=object.AmbvRiskValue</camunda:script>
         <di:waypoint x="1585" y="740" />
         <di:waypoint x="1715" y="740" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1629" y="722" width="39" height="14" />
+          <dc:Bounds x="1632" y="722" width="39" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0mfrj0z_di" bpmnElement="Flow_0mfrj0z">
