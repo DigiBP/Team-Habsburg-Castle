@@ -167,7 +167,7 @@ productAmount=object.productAmount</camunda:script>
     <bpmn:startEvent id="PharmacyBot">
       <bpmn:outgoing>Flow_1pjqnso</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="Activity_1ma7sux" name="Assess order" camunda:candidateGroups="${PharmacySuperUser}">
+    <bpmn:userTask id="Activity_1ma7sux" name="Assess order">
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="productName" label="Product Name" type="string" defaultValue="${productName}" />
@@ -251,7 +251,7 @@ prescription_array=object.prescription</camunda:script>
     <bpmn:userTask id="Activity_0tqwohl" name="Compose message to client">
       <bpmn:extensionElements>
         <camunda:formData>
-          <camunda:formField id="Test" label="Test" type="string" />
+          <camunda:formField id="message" label="Message sent?" type="boolean" />
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0d15h1d</bpmn:incoming>
