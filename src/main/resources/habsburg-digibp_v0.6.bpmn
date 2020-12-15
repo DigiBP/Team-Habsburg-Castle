@@ -167,7 +167,7 @@ productAmount=object.productAmount</camunda:script>
     <bpmn:startEvent id="PharmacyBot">
       <bpmn:outgoing>Flow_1pjqnso</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="Activity_1ma7sux" name="Assess order">
+    <bpmn:userTask id="Activity_1ma7sux" name="Assess order" camunda:candidateGroups="${PharmacySuperUser}">
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="productName" label="Product Name" type="string" defaultValue="${productName}" />
