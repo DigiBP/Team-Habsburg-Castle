@@ -1,0 +1,161 @@
+activityId,activityName,activityType,processInstanceId,taskId,assignee,startTime,endTime,durationInMillis,tenantId
+Activity_00bcljh,Packaging and shipping,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,f28af0a8-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:16:22.22,2020-12-16 22:16:54.54,31190,demo
+Activity_00jxdls,Define OrderType,userTask,2f0f5cb3-37bb-11eb-9653-92effa0cc9b6,2f0faad6-37bb-11eb-9653-92effa0cc9b6,demo,2020-12-06 13:04:25.25,2020-12-06 13:04:42.42,16553,demo
+Activity_0cctmb9,Release Medicine,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,d1316369-3f15-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:40:50.50,2020-12-15 21:41:12.12,21431,demo
+Activity_0cctmb9,Release Medicine,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,6a2926f6-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:12:34.34,2020-12-16 22:12:40.40,6226,demo
+Activity_0cctmb9,Release Medicine,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,ff77ac4a-3f18-11eb-9593-2ee820bf2e10,demo,2020-12-15 22:03:36.36,2020-12-15 22:03:59.59,22985,demo
+Activity_0cq0f2q,Call API,serviceTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:37:17.17,2020-12-15 21:37:19.19,2073,demo
+Activity_0cq0f2q,Call API,serviceTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:59:32.32,2020-12-15 21:59:34.34,2011,demo
+Activity_0j573sa,Release Medicine,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,ee9f1069-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:16:16.16,2020-12-16 22:16:22.22,6573,demo
+Activity_0j573sa,Release Medicine,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,142a7f0a-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:03:00.00,2020-12-16 22:03:15.15,15305,demo
+Activity_0jq5mu8,Calculate Price and Working hours,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,c5a833b0-3f15-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:40:31.31,2020-12-15 21:40:50.50,19352,demo
+Activity_0jq5mu8,Calculate Price and Working hours,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,6140e0e9-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:12:19.19,2020-12-16 22:12:34.34,14941,demo
+Activity_0jq5mu8,Calculate Price and Working hours,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,ef386e9d-3f18-11eb-9593-2ee820bf2e10,demo,2020-12-15 22:03:09.09,2020-12-15 22:03:36.36,27256,demo
+Activity_0mow97z,Calculate AMBV risk value,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,733a3721-3f15-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:38:12.12,2020-12-15 21:39:50.50,97221,demo
+Activity_0mow97z,Calculate AMBV risk value,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,b7da604d-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:14:44.44,2020-12-16 22:15:10.10,26442,demo
+Activity_0mow97z,Calculate AMBV risk value,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,3cafeb7a-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:11:17.17,2020-12-16 22:11:55.55,37878,demo
+Activity_0mow97z,Calculate AMBV risk value,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,e0c76f7e-3fe1-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:01:34.34,2020-12-16 22:02:01.01,27558,demo
+Activity_0mow97z,Calculate AMBV risk value,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,88875f6d-3f18-11eb-9593-2ee820bf2e10,demo,2020-12-15 22:00:17.17,2020-12-15 22:02:10.10,113193,demo
+Activity_0rz68uo,POST AMBV details,serviceTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:39:50.50,2020-12-15 21:39:53.53,3347,demo
+Activity_0rz68uo,POST AMBV details,serviceTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:15:10.10,2020-12-16 22:15:22.22,11704,demo
+Activity_0rz68uo,POST AMBV details,serviceTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:11:55.55,2020-12-16 22:11:57.57,2102,demo
+Activity_0rz68uo,POST AMBV details,serviceTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:02:01.01,2020-12-16 22:02:20.20,19199,demo
+Activity_0rz68uo,POST AMBV details,serviceTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:02:10.10,2020-12-15 22:02:14.14,3804,demo
+Activity_0tqwohl,Compose message to client,userTask,83468421-3fe1-11eb-9139-ae3f3df38a4e,bbfca42d-3fe1-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:00:32.32,2020-12-16 22:00:51.51,18880,demo
+Activity_0uc8qqv,Provide AMBV details,serviceTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:39:53.53,2020-12-15 21:39:55.55,1498,demo
+Activity_0uc8qqv,Provide AMBV details,serviceTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:15:22.22,2020-12-16 22:15:28.28,5425,demo
+Activity_0uc8qqv,Provide AMBV details,serviceTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:11:57.57,2020-12-16 22:11:59.59,1701,demo
+Activity_0uc8qqv,Provide AMBV details,serviceTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:02:20.20,2020-12-16 22:02:28.28,7903,demo
+Activity_0uc8qqv,Provide AMBV details,serviceTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:02:14.14,2020-12-15 22:02:15.15,1697,demo
+Activity_0xmoa8l,Give product to customer,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,044dcd02-3f16-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:42:16.16,2020-12-15 21:42:29.29,13518,demo
+Activity_0xmoa8l,Give product to customer,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,7467120a-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:12:51.51,2020-12-16 22:12:58.58,7405,demo
+Activity_0xmoa8l,Give product to customer,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,792c57dd-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:03:30.30,2020-12-16 22:04:20.20,6964,demo
+Activity_0xmoa8l,Give product to customer,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,580eb64a-3fe2-11eb-9139-ae3f3df38a4e,NULL,2020-12-16 22:04:54.54,2020-12-16 22:05:35.35,41634,demo
+Activity_0xmoa8l,Give product to customer,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,26001353-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:05:49.49,2020-12-16 22:05:56.56,50504,demo
+Activity_0xmoa8l,Give product to customer,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,368ffba3-3f19-11eb-9593-2ee820bf2e10,demo,2020-12-15 22:05:09.09,2020-12-15 22:05:27.27,18037,demo
+Activity_0ypyrhr,Call pharmacyBot,serviceTask,2f0f5cb3-37bb-11eb-9653-92effa0cc9b6,NULL,NULL,2020-12-06 13:04:42.42,2020-12-06 13:04:43.43,1581,demo
+Activity_11txvzf,Produce Medicine,manualTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:15:55.55,2020-12-16 22:15:55.55,2,demo
+Activity_11txvzf,Produce Medicine,manualTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:02:47.47,2020-12-16 22:02:47.47,1,demo
+Activity_14l32iy,Decide on manufactorability,businessRuleTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:38:12.12,2020-12-15 21:38:12.12,18,demo
+Activity_14l32iy,Decide on manufactorability,businessRuleTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:14:44.44,2020-12-16 22:14:44.44,10,demo
+Activity_14l32iy,Decide on manufactorability,businessRuleTask,83468421-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:00:30.30,2020-12-16 22:00:31.31,419,demo
+Activity_14l32iy,Decide on manufactorability,businessRuleTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:11:17.17,2020-12-16 22:11:17.17,29,demo
+Activity_14l32iy,Decide on manufactorability,businessRuleTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:01:33.33,2020-12-16 22:01:34.34,143,demo
+Activity_14l32iy,Decide on manufactorability,businessRuleTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:00:17.17,2020-12-15 22:00:17.17,8,demo
+Activity_1919wh9,Produce Medicine,manualTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:40:31.31,2020-12-15 21:40:31.31,0,demo
+Activity_1919wh9,Produce Medicine,manualTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:12:19.19,2020-12-16 22:12:19.19,0,demo
+Activity_1919wh9,Produce Medicine,manualTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:03:09.09,2020-12-15 22:03:09.09,0,demo
+Activity_1asig2f,Fill in order form,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,3208987d-3f11-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:07:45.45,2020-12-15 21:37:17.17,1771635,demo
+Activity_1asig2f,Fill in order form,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,84783afd-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:13:18.18,2020-12-16 22:14:09.09,50991,demo
+Activity_1asig2f,Fill in order form,userTask,83468421-3fe1-11eb-9139-ae3f3df38a4e,8c23a69f-3fe1-11eb-9139-ae3f3df38a4e,demo,2020-12-16 21:59:12.12,2020-12-16 21:59:42.42,30444,demo
+Activity_1asig2f,Fill in order form,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,24b68750-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:10:37.37,2020-12-16 22:11:02.02,25145,demo
+Activity_1asig2f,Fill in order form,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,d26c5ae4-3fe1-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:01:10.10,2020-12-16 22:01:25.25,15940,demo
+Activity_1asig2f,Fill in order form,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,3f798c45-3f17-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:51:05.05,2020-12-15 21:59:32.32,507345,demo
+Activity_1c3t2y7,Define OrderType,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,260dbb42-3f11-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:07:25.25,2020-12-15 21:07:45.45,20096,demo
+Activity_1c3t2y7,Define OrderType,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,80b6c622-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:13:11.11,2020-12-16 22:13:18.18,6291,demo
+Activity_1c3t2y7,Define OrderType,userTask,83468421-3fe1-11eb-9139-ae3f3df38a4e,83496a54-3fe1-11eb-9139-ae3f3df38a4e,demo,2020-12-16 21:58:57.57,2020-12-16 21:59:12.12,14835,demo
+Activity_1c3t2y7,Define OrderType,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,a5cb12c5-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:07:04.04,2020-12-16 22:10:37.37,212929,demo
+Activity_1c3t2y7,Define OrderType,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,cd7488e9-3fe1-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:01:01.01,2020-12-16 22:01:10.10,8329,demo
+Activity_1c3t2y7,Define OrderType,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,ec767aca-3f16-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:48:45.45,2020-12-15 21:51:05.05,139269,demo
+Activity_1dfe8kv,Finish documentation,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,0c5f13fd-3f16-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:42:29.29,2020-12-15 21:43:00.00,30407,demo
+Activity_1dfe8kv,Finish documentation,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,05227636-3fe4-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:16:54.54,2020-12-16 22:17:02.02,8546,demo
+Activity_1dfe8kv,Finish documentation,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,78d28285-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:12:58.58,2020-12-16 22:13:05.05,6627,demo
+Activity_1dfe8kv,Finish documentation,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,7d542fa8-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:05:56.56,2020-12-16 22:06:06.06,9311,demo
+Activity_1dfe8kv,Finish documentation,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,4151476e-3f19-11eb-9593-2ee820bf2e10,demo,2020-12-15 22:05:27.27,2020-12-15 22:05:51.51,24110,demo
+Activity_1gz848z,Generate Pharmacy Production Protocol,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,b0108d7b-3f15-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:39:55.55,2020-12-15 21:40:31.31,36223,demo
+Activity_1gz848z,Generate Pharmacy Production Protocol,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,558d6de4-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:11:59.59,2020-12-16 22:12:19.19,19628,demo
+Activity_1gz848z,Generate Pharmacy Production Protocol,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,cf471817-3f18-11eb-9593-2ee820bf2e10,demo,2020-12-15 22:02:15.15,2020-12-15 22:03:09.09,53589,demo
+Activity_1iyt8n3,Continue process,userTask,2f0f5cb3-37bb-11eb-9653-92effa0cc9b6,39df9ca5-37bb-11eb-9653-92effa0cc9b6,demo,2020-12-06 13:04:43.43,2020-12-06 13:06:36.36,112805,demo
+Activity_1jro9wu,Inform Customer,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,f9f750ee-3f15-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:41:59.59,2020-12-15 21:42:16.16,17336,demo
+Activity_1jro9wu,Inform Customer,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,6ddfc665-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:12:40.40,2020-12-16 22:12:51.51,10944,demo
+Activity_1jro9wu,Inform Customer,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,70e1d869-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:03:23.23,2020-12-16 22:03:30.30,13906,demo
+Activity_1jro9wu,Inform Customer,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,441ecca6-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:04:20.20,2020-12-16 22:04:54.54,33430,demo
+Activity_1jro9wu,Inform Customer,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,21d7511f-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:05:35.35,2020-12-16 22:05:49.49,6950,demo
+Activity_1jro9wu,Inform Customer,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,278d83af-3f19-11eb-9593-2ee820bf2e10,demo,2020-12-15 22:04:44.44,2020-12-15 22:05:09.09,25177,demo
+Activity_1ma7sux,Assess order,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,533fb8cf-3f15-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:37:19.19,2020-12-15 21:38:12.12,53612,demo
+Activity_1ma7sux,Assess order,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,a2dde885-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:14:09.09,2020-12-16 22:14:44.44,35135,demo
+Activity_1ma7sux,Assess order,userTask,83468421-3fe1-11eb-9139-ae3f3df38a4e,9e500d67-3fe1-11eb-9139-ae3f3df38a4e,demo,2020-12-16 21:59:42.42,2020-12-16 22:00:30.30,48218,demo
+Activity_1ma7sux,Assess order,userTask,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,33b41d58-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:11:02.02,2020-12-16 22:11:17.17,14975,demo
+Activity_1ma7sux,Assess order,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,dbed378c-3fe1-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:01:25.25,2020-12-16 22:01:33.33,7902,demo
+Activity_1ma7sux,Assess order,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,6f13695b-3f18-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:59:34.34,2020-12-15 22:00:17.17,42681,demo
+Activity_1s26q3u,Calculate Price and Working hours,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,e22fc77c-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:15:55.55,2020-12-16 22:16:16.16,20860,demo
+Activity_1s26q3u,Calculate Price and Working hours,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,0ccea55d-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:02:47.47,2020-12-16 22:03:00.00,12343,demo
+Activity_1vamgl3,Complete billing,userTask,260dbb3f-3f11-11eb-9593-2ee820bf2e10,ddf7f516-3f15-11eb-9593-2ee820bf2e10,demo,2020-12-15 21:41:12.12,2020-12-15 21:41:59.59,46969,demo
+Activity_1vamgl3,Complete billing,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,1d4ac507-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:03:15.15,2020-12-16 22:03:23.23,7628,demo
+Activity_1vamgl3,Complete billing,userTask,ec7653b7-3f16-11eb-9593-2ee820bf2e10,0d2b0ef7-3f19-11eb-9593-2ee820bf2e10,demo,2020-12-15 22:03:59.59,2020-12-15 22:04:44.44,44262,demo
+Activity_1xuqnmu,Generate CleanLab Production Protocol,userTask,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,d1d38be7-3fe3-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:15:28.28,2020-12-16 22:15:55.55,27443,demo
+Activity_1xuqnmu,Generate CleanLab Production Protocol,userTask,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,015c8018-3fe2-11eb-9139-ae3f3df38a4e,demo,2020-12-16 22:02:28.28,2020-12-16 22:02:47.47,19190,demo
+Event_0zbbwzq,Order fullfilled,noneEndEvent,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:43:00.00,2020-12-15 21:43:00.00,0,demo
+Event_0zbbwzq,Order fullfilled,noneEndEvent,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:17:02.02,2020-12-16 22:17:02.02,1,demo
+Event_0zbbwzq,Order fullfilled,noneEndEvent,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:13:05.05,2020-12-16 22:13:05.05,0,demo
+Event_0zbbwzq,Order fullfilled,noneEndEvent,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:06:06.06,2020-12-16 22:06:06.06,0,demo
+Event_0zbbwzq,Order fullfilled,noneEndEvent,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:05:51.51,2020-12-15 22:05:51.51,0,demo
+Event_0zwffnq,Order cancelled,endEvent,83468421-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:00:51.51,2020-12-16 22:00:51.51,0,demo
+Event_15dcqch,1 week,boundaryTimer,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:04:20.20,2020-12-16 22:04:20.20,0,demo
+Event_15dcqch,1 week,boundaryTimer,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:05:35.35,2020-12-16 22:05:35.35,0,demo
+Gateway_002rqdr,Order type?,exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:41:59.59,2020-12-15 21:41:59.59,1,demo
+Gateway_002rqdr,Order type?,exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:16:22.22,2020-12-16 22:16:22.22,0,demo
+Gateway_002rqdr,Order type?,exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:12:40.40,2020-12-16 22:12:40.40,1,demo
+Gateway_002rqdr,Order type?,exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:03:23.23,2020-12-16 22:03:23.23,1,demo
+Gateway_002rqdr,Order type?,exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:04:44.44,2020-12-15 22:04:44.44,0,demo
+Gateway_04o2c59,Exclusive Gateway,exclusiveGateway,2f0f5cb3-37bb-11eb-9653-92effa0cc9b6,NULL,NULL,2020-12-06 13:04:43.43,2020-12-06 13:04:43.43,0,demo
+Gateway_0amzeou,Exclusive Gateway,exclusiveGateway,2f0f5cb3-37bb-11eb-9653-92effa0cc9b6,NULL,NULL,2020-12-06 13:04:42.42,2020-12-06 13:04:42.42,1,demo
+Gateway_0t03y0x,Exclusive Gateway,exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:41:59.59,2020-12-15 21:41:59.59,0,demo
+Gateway_0t03y0x,Exclusive Gateway,exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:16:22.22,2020-12-16 22:16:22.22,0,demo
+Gateway_0t03y0x,Exclusive Gateway,exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:12:40.40,2020-12-16 22:12:40.40,0,demo
+Gateway_0t03y0x,Exclusive Gateway,exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:03:23.23,2020-12-16 22:03:23.23,0,demo
+Gateway_0t03y0x,Exclusive Gateway,exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:04:44.44,2020-12-15 22:04:44.44,0,demo
+Gateway_12hp2tf,AMBV value?,exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:39:55.55,2020-12-15 21:39:55.55,0,demo
+Gateway_12hp2tf,AMBV value?,exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:15:28.28,2020-12-16 22:15:28.28,3,demo
+Gateway_12hp2tf,AMBV value?,exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:11:59.59,2020-12-16 22:11:59.59,0,demo
+Gateway_12hp2tf,AMBV value?,exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:02:28.28,2020-12-16 22:02:28.28,1,demo
+Gateway_12hp2tf,AMBV value?,exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:02:15.15,2020-12-15 22:02:15.15,0,demo
+Gateway_15n3ex1,Manufacturable ?,exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:38:12.12,2020-12-15 21:38:12.12,0,demo
+Gateway_15n3ex1,Manufacturable ?,exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:14:44.44,2020-12-16 22:14:44.44,0,demo
+Gateway_15n3ex1,Manufacturable ?,exclusiveGateway,83468421-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:00:32.32,2020-12-16 22:00:32.32,1,demo
+Gateway_15n3ex1,Manufacturable ?,exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:11:17.17,2020-12-16 22:11:17.17,1,demo
+Gateway_15n3ex1,Manufacturable ?,exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:01:34.34,2020-12-16 22:01:34.34,0,demo
+Gateway_15n3ex1,Manufacturable ?,exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:00:17.17,2020-12-15 22:00:17.17,0,demo
+Gateway_1ajw4ec,Exclusive Gateway,exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:42:29.29,2020-12-15 21:42:29.29,1,demo
+Gateway_1ajw4ec,Exclusive Gateway,exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:16:54.54,2020-12-16 22:16:54.54,1,demo
+Gateway_1ajw4ec,Exclusive Gateway,exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:12:58.58,2020-12-16 22:12:58.58,0,demo
+Gateway_1ajw4ec,Exclusive Gateway,exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:05:56.56,2020-12-16 22:05:56.56,0,demo
+Gateway_1ajw4ec,Exclusive Gateway,exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:05:27.27,2020-12-15 22:05:27.27,1,demo
+Gateway_1dcnuv3,"Payment Method?
+
+",exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:41:12.12,2020-12-15 21:41:12.12,1,demo
+Gateway_1dcnuv3,"Payment Method?
+
+",exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:16:22.22,2020-12-16 22:16:22.22,0,demo
+Gateway_1dcnuv3,"Payment Method?
+
+",exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:12:40.40,2020-12-16 22:12:40.40,0,demo
+Gateway_1dcnuv3,"Payment Method?
+
+",exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:03:15.15,2020-12-16 22:03:15.15,1,demo
+Gateway_1dcnuv3,"Payment Method?
+
+",exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:03:59.59,2020-12-15 22:03:59.59,0,demo
+Gateway_1h6hu2r,Exclusive Gateway,exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:41:12.12,2020-12-15 21:41:12.12,0,demo
+Gateway_1h6hu2r,Exclusive Gateway,exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:16:22.22,2020-12-16 22:16:22.22,0,demo
+Gateway_1h6hu2r,Exclusive Gateway,exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:12:40.40,2020-12-16 22:12:40.40,1,demo
+Gateway_1h6hu2r,Exclusive Gateway,exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:03:15.15,2020-12-16 22:03:15.15,1,demo
+Gateway_1h6hu2r,Exclusive Gateway,exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 22:03:59.59,2020-12-15 22:03:59.59,0,demo
+Gateway_1hf2grb,OrderType?,exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:07:45.45,2020-12-15 21:07:45.45,0,demo
+Gateway_1hf2grb,OrderType?,exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:13:18.18,2020-12-16 22:13:18.18,2,demo
+Gateway_1hf2grb,OrderType?,exclusiveGateway,83468421-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 21:59:12.12,2020-12-16 21:59:12.12,2,demo
+Gateway_1hf2grb,OrderType?,exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:10:37.37,2020-12-16 22:10:37.37,1,demo
+Gateway_1hf2grb,OrderType?,exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:01:10.10,2020-12-16 22:01:10.10,0,demo
+Gateway_1hf2grb,OrderType?,exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:51:05.05,2020-12-15 21:51:05.05,0,demo
+Gateway_1qkdom8,Exclusive Gateway,exclusiveGateway,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:37:17.17,2020-12-15 21:37:17.17,0,demo
+Gateway_1qkdom8,Exclusive Gateway,exclusiveGateway,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:14:09.09,2020-12-16 22:14:09.09,0,demo
+Gateway_1qkdom8,Exclusive Gateway,exclusiveGateway,83468421-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 21:59:42.42,2020-12-16 21:59:42.42,1,demo
+Gateway_1qkdom8,Exclusive Gateway,exclusiveGateway,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:11:02.02,2020-12-16 22:11:02.02,1,demo
+Gateway_1qkdom8,Exclusive Gateway,exclusiveGateway,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:01:25.25,2020-12-16 22:01:25.25,0,demo
+Gateway_1qkdom8,Exclusive Gateway,exclusiveGateway,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:59:32.32,2020-12-15 21:59:32.32,0,demo
+PharmacyBot,Start Pharmacy Bot,startEvent,260dbb3f-3f11-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:07:25.25,2020-12-15 21:07:25.25,0,demo
+PharmacyBot,Start Pharmacy Bot,startEvent,80b677ff-3fe3-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:13:11.11,2020-12-16 22:13:11.11,1,demo
+PharmacyBot,Start Pharmacy Bot,startEvent,83468421-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 21:58:57.57,2020-12-16 21:58:57.57,4,demo
+PharmacyBot,Start Pharmacy Bot,startEvent,a5caebb2-3fe2-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:07:04.04,2020-12-16 22:07:04.04,1,demo
+PharmacyBot,Start Pharmacy Bot,startEvent,cd743ac6-3fe1-11eb-9139-ae3f3df38a4e,NULL,NULL,2020-12-16 22:01:01.01,2020-12-16 22:01:01.01,0,demo
+PharmacyBot,Start Pharmacy Bot,startEvent,ec7653b7-3f16-11eb-9593-2ee820bf2e10,NULL,NULL,2020-12-15 21:48:45.45,2020-12-15 21:48:45.45,0,demo
