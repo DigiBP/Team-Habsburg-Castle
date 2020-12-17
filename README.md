@@ -1,3 +1,23 @@
+# Team Habsburg Deliverables
+
+Link to GITHUB Repository:
+https://github.com/DigiBP/Team-Habsburg-Castle
+
+Link to GITHUB WIKI:
+https://github.com/DigiBP/Team-Habsburg-Castle/wiki
+
+Link to GITHUB Project Plan:
+https://github.com/DigiBP/Team-Habsburg-Castle/projects
+
+Link to Video Presentation:
+https://www.youtube.com/watch?v=qLvF5JkMuK4&ab_channel=ChristopherGalli
+
+
+Link to running instantiation of cloud based deployment:
+http://digibp-habsburg.herokuapp.com/app/welcome/default/#!/login
+https://dashboard.heroku.com/apps/digibp-habsburg
+
+
 # DigiBP Camunda Template
 
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
