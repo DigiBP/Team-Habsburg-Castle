@@ -13,8 +13,11 @@ Link to Video Presentation:
 https://www.youtube.com/watch?v=qLvF5JkMuK4&ab_channel=ChristopherGalli
 
 
-Link to running instantiation of cloud based deployment: \n
-http://digibp-habsburg.herokuapp.com/app/welcome/default/#!/login \n
+Link to running instantiation of cloud based deployment:
+
+http://digibp-habsburg.herokuapp.com/app/welcome/default/#!/login
+
+
 https://dashboard.heroku.com/apps/digibp-habsburg
 
 
