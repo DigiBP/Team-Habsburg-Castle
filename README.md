@@ -1,15 +1,19 @@
 # Team Habsburg Deliverables
 
 Link to GITHUB Repository:
+
 https://github.com/DigiBP/Team-Habsburg-Castle
 
 Link to GITHUB WIKI:
+
 https://github.com/DigiBP/Team-Habsburg-Castle/wiki
 
 Link to GITHUB Project Plan:
+
 https://github.com/DigiBP/Team-Habsburg-Castle/projects
 
 Link to Video Presentation:
+
 https://www.youtube.com/watch?v=qLvF5JkMuK4&ab_channel=ChristopherGalli
 
 
