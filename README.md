@@ -12,6 +12,10 @@ Link to GitHub Project Plan:
 
 https://github.com/DigiBP/Team-Habsburg-Castle/projects
 
+Link to Final BPMN version 1.0
+
+https://github.com/DigiBP/Team-Habsburg-Castle/tree/master/src/main/resources/FinaL_Team_Habsburg_v1.0.bpmn
+
 Link to Video Presentation:
 
 https://www.youtube.com/watch?v=qLvF5JkMuK4&ab_channel=ChristopherGalli
