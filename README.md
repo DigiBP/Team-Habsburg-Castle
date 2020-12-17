@@ -29,6 +29,17 @@ http://digibp-habsburg.herokuapp.com/app/welcome/default/#!/login
 https://dashboard.heroku.com/apps/digibp-habsburg
 
 
+Login credentials:
+
+Admin:      demo pw: demo
+Assistant:  HbAssistant1 pw: Assistant1
+Assistant:  HbAssistant2 pw: Assistant2
+Assistant:  HbAssistant3 pw: Assistant3
+Assistant:  HbAssistant4 pw: Assistant4
+Pharmacist: HbPharmacist1 pw: Pharmacist1
+Pharmacist: HbPharmacist2 pw: Pharmacist2
+
+
 # DigiBP Camunda Template
 
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
